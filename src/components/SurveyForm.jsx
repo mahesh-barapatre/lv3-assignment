@@ -1,9 +1,6 @@
 import React, { useContext, useState } from 'react';
 import useFormValidation from '../Hooks/useFromValidation';
 import validate from '../utils/validate';
-import Dropdown from './Dropdown';
-import ConditionalField from './ConditionalField';
-import AdminSummary from './AdminSummary';
 import FormFields from './FormFields';
 import SelectOptn from './SelectOptn';
 import Button from './Button';
@@ -16,7 +13,7 @@ const SurveyForm = ({isSubmitted, setIsSubmitted}) => {
   const { additionalQuestions, setAdditionalQuestions } = useContext(AdditionalQuestionsContext);
   const { errors, handleChange, handleSubmit } = useFormValidation(formData, setFormData, validate);
 
-        ///for real API requests
+                            ///for real API requests
 
 //   const fetchAdditionalQuestions = async (topic) => {
 //     // Simulate fetching from an external API
@@ -32,7 +29,7 @@ const SurveyForm = ({isSubmitted, setIsSubmitted}) => {
 //   };
 
 
-        ///for mock API requests
+                            ///for mock API requests
         const submitForm = async () => {
             const questions = await fetchAdditionalQuestions(formData.surveyTopic);
             setAdditionalQuestions(questions);
