@@ -10,7 +10,7 @@ function App() {
   const { additionalQuestions, setAdditionalQuestions } = useContext(AdditionalQuestionsContext);
 
   return (
-  <div className=''>
+  <div className='p-3'>
     <h1 className='text-5xl font-extrabold font-mono text-amber-600 text-center w-full'>
       {
         !isSubmitted ? "Survey Form" : "Survey Summary"
